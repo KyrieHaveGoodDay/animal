@@ -1,0 +1,274 @@
+* {
+    // 禁用长按选择文字
+    user-select: none;
+}
+body {
+    // 阻止連點放大
+    touch-action: manipulation;
+    user-select: none;
+}
+.main {
+    // height: 2000px;
+    height: 100vh;
+    background: #88d6df;
+    display: flex;
+    @media screen and(max-width:768px) {
+        height: 100%;
+    }
+}
+.pointer-none {
+    pointer-events: none;
+}
+.game_box {
+    // border: 1px solid black;
+    width: 450px;
+    height: 700px;
+    margin: auto;
+    background-image: url(../img/main_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    // display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    @media screen and(max-width:768px) {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    // 雲
+    .cloud1 {
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        // height: 100px;
+        @media screen and(max-width:768px) {
+            // width: 10%;
+            top: 5%;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            @media screen and(max-width:768px) {
+                width: 80%;
+                // top: 5%;
+            }
+        }
+    }
+    .cloud2 {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        // height: 100px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            @media screen and(max-width:768px) {
+                width: 80%;
+            }
+        }
+    }
+    // 樹
+    .tree {
+        width: 70%;
+        height: 80%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @media screen and(max-width:500px) {
+            width: 85%;
+            height: 73%;
+        }
+    }
+    // 標題
+    .title {
+        position: absolute;
+        width: 80%;
+        top: 10%;
+        left: 10%;
+        text-align: center;
+        @media screen and(max-width:768px) {
+            top: 15%;
+        }
+        .level {
+            color: #fff;
+            display: inline-block;
+            position: relative;
+            transform: translateY(-40px);
+            opacity: 0;
+            .level-p {
+                position: relative;
+                z-index: 3;
+                background: #e98a8a;
+                padding: 2px 10px;
+                border-radius: 20px;
+                border-left: 1px solid #fff;
+                border-top: 1px solid #fff;
+                font-weight: 500;
+            }
+            .level-bg {
+                width: 100%;
+                height: 100%;
+                background: #bb5d5d;
+                position: absolute;
+                top: 13%;
+                left: 0;
+                z-index: 1;
+                @extend .level-p;
+                border: 0;
+            }
+        }
+    }
+    // 動物們
+    .animal {
+        width: 66%;
+        margin-top: 280px;
+        position: relative;
+        z-index: 3;
+        animation: startAni 1s linear infinite alternate;
+        transform-origin: 50% 50%;
+        @media screen and(max-width:768px) {
+            margin-top: 80vw;
+            width: 50%;
+        }
+        @media screen and(max-width:500px) {
+            width: 70%;
+        }
+    }
+    // 開始遊戲
+    .start {
+        width: 66%;
+        cursor: pointer;
+    }
+}
+
+.game-main {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    margin-top: 180px;
+    @media screen and(max-width:768px) {
+        margin-top: 45vw;
+    }
+    .everyOne {
+        width: 80%;
+        margin-bottom: 10px;
+        opacity: 0;
+    }
+    .check {
+        width: 72%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        background: #fff7c5;
+        border-radius: 20px;
+        opacity: 0;
+        // transition: all 0.5s;
+        img {
+            width: 25%;
+            // margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+// pass
+.pass {
+    position: relative;
+    z-index: 6;
+    text-align: center;
+    transition: all 0.5s;
+    .pass-top {
+        width: 85%;
+        margin: 0 auto 10px;
+        animation: passAni 1s linear infinite alternate;
+
+        // opacity: 0;
+    }
+    .award {
+        cursor: pointer;
+        width: 60%;
+        // margin: 0 auto;
+        // opacity: 0;
+    }
+}
+.truesAni {
+    animation: trues 0.8s linear infinite alternate;
+
+    // animation-name:trues ;
+    // animation-duration: 1s;
+    // animation-timing-function: linear;
+    // animation-iteration-count: infinite;
+}
+
+@keyframes trues {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.09);
+    }
+}
+
+@keyframes startAni {
+    0% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
+
+@keyframes passAni {
+    0% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+// 燈箱
+#exampleModal {
+    // background: rgba(255, 255, 255, 0.5) !important;
+    .modal-content {
+        border: 0;
+        background-color: transparent;
+        @media screen and(max-width:500px) {
+         margin-top: -20vw;
+        }
+    }
+    .falseBox {
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 20px;
+        color: #fff;
+        padding: 5px;
+        .false-data {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            padding: 100px;
+            font-size: 60px;
+            position: relative;
+            @media screen and(max-width:500px) {
+                padding: 15vw;
+            font-size: 12vw;
+            }
+            .err{
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                cursor: pointer;
+                @media screen and(max-width:500px) {
+                    width: 8%;
+                }
+            }
+        }
+    }
+}

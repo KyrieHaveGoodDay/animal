@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>動物大集合</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no, user-scalable=0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="Pragma" content="no-cache">
+  <!--CSS-->
+  <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+  <link type="text/css" rel="stylesheet" href="css/all.css?v1">
+
+</head>
+
+<body>
+  <div class="wrap">
+
+   
+
+
+    <!-- Main -->
+    <div class="main">
+
+      <!-- 最外層 450x700 -->
+      <div class="game_box">
+        <div class="cloud1 pointer-none">
+          <img src="img/cloud1.png" alt="">
+        </div>
+        <div class="cloud2 pointer-none">
+          <img src="img/cloud2.png" alt="">
+        </div>
+        <!-- 樹 -->
+        <img class="tree pointer-none" src="img/tree.png" alt="">
+        <!-- 標題 -->
+        <div class="title">
+          <img class=" pointer-none" src="img/title.png" alt="">
+          <div class="level">
+            <p class="level-p"><span id="numB">1</span>/<span id="allTot"></span>關卡</p>
+            <div class="level-bg"></div>
+          </div>
+        </div>
+        <!-- 動物們 -->
+        <img class="animal pointer-none" src="img/animal.png" alt="">
+
+        <!-- 開始遊戲 -->
+        <img id="start" class="start  pointer-none" src="img/start.png" alt="">
+
+        <!-- 主遊戲內容 -->
+        <div class="game-main">
+
+
+        </div>
+
+        <!-- 成功 -->
+        <!-- <div class="pass">
+          <img class="pointer-none pass-top" src="img/pass.png" alt="">
+          <a id="pass_a" href="https://www.pchomeec.tw/sites/2beauty4?new24_c3" target="_blank"> <img class="award" src="img/award.png" alt=""> </a>
+        </div> -->
+
+      </div>
+
+      <!-- 失敗燈箱 -->
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+      </button> -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="falseBox">
+              <div class="false-data">
+                你確定？
+                <img class="err" src="img/err.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- END Main -->
+
+    <!-- Footer -->
+
+    <!-- END Footer -->
+
+    <!-- Go Top & other sticker-->
+    <!-- <div class="right__box">
+      <div class="gotop"></div>
+    </div> -->
+
+  </div>
+  <!-- END wrap -->
+
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript' src='//cdn.jsdelivr.net/jquery.marquee/1.4.0/jquery.marquee.min.js'></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/swiper.min.js"></script>
+  <script type="text/javascript" src="js/gsap.min.js"></script>
+  <script type="text/javascript" src="js/day.min.js"></script>
+  <script>
+
+    // 獎勵連結
+    let passLink = 'https://www.pchomeec.tw/sites/2beauty4?new24_c3';
+
+    // 動物
+    let everyBody = [
+      {
+        // 動物本人
+        'img': 'Crocodile.png',
+        // 左邊食物
+        'food_left': 'beef.png',
+        // 左邊食物對錯 true / false
+        'food_left_state': 'true',
+        // 右邊食物
+        'food_right': 'grass.png',
+        // 右邊食物對錯 true / false
+        'food_right_state': 'false',
+
+      },
+      {
+        'img': 'rabbit.png',
+        'food_left': 'beef.png',
+        'food_left_state': 'false',
+        'food_right': 'grass.png',
+        'food_right_state': 'true',
+
+      },
+      {
+        'img': 'lion.png',
+        'food_left': 'beef.png',
+        'food_left_state': 'true',
+        'food_right': 'grass.png',
+        'food_right_state': 'false',
+
+      },
+      {
+        'img': 'zebra.png',
+        'food_left': 'beef.png',
+        'food_left_state': 'false',
+        'food_right': 'grass.png',
+        'food_right_state': 'true',
+
+      },
+      {
+        'img': 'deer.png',
+        'food_left': 'beef.png',
+        'food_left_state': 'false',
+        'food_right': 'grass.png',
+        'food_right_state': 'true',
+
+      },
+
+    ]
+
+
+
+
+  </script>
+  <script type="text/javascript" src="js/all.js?v1"></script>
+</body>
+
+</html>
